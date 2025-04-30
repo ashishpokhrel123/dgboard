@@ -30,10 +30,10 @@ const App = () => (
               />
             }
           />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-
+          {/* ADMIN ROUTE MUST COME BEFORE CATCH-ALL */}
           <Route path="/admin" element={<Adminpage />} />
+          {/* CATCH-ALL ROUTE SHOULD BE LAST */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
