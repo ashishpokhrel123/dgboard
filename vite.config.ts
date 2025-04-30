@@ -19,5 +19,10 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: '/', // Critical for proper asset paths on Netlify
+  build: {
+    outDir: 'dist', // Explicit output directory
+    emptyOutDir: true, // Cleans the directory before build
+  }
     
 }));
